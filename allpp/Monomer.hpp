@@ -19,8 +19,8 @@ public:
     const std::string& code3() const;
     const std::string& name() const;
 
-    static MonomerClass<monomer_type>& from_code1(char code1);
-    static MonomerClass<monomer_type>& from_code3(const std::string& code3);
+    static MonomerClass<monomer_type>* from_code1(char code1);
+    static MonomerClass<monomer_type>* from_code3(const std::string& code3);
 
 private:
     const char code1_;
@@ -35,7 +35,7 @@ public:
     MonomerClass(char code1):
     MonomerClass(const std::string& code3):
 
-    const MonomerClass<monomer_class>& monomer_class() const;
+    const MonomerClass<monomer_class>* monomer_class() const;
     char code1() const;
     const std::string& code3() const;
     const std::string& name() const;
@@ -47,7 +47,7 @@ public:
     void operator delete(void* x);
 
 private:
-    const MonomerClass<monomer_class>& monomer_class_;
+    const MonomerClass<monomer_class>* monomer_class_;
 };
 
 }
