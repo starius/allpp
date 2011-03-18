@@ -37,6 +37,9 @@ public:
     const std::string& code3() const;
     const std::string& name() const;
 
+    bool operator==(const Monomer<monomer_type>& other) const;
+    bool operator!=(const Monomer<monomer_type>& other) const;
+
 private:
     const MonomerClass<monomer_class>& monomer_class_;
 };
