@@ -1,6 +1,7 @@
 #ifndef ALLPP_SEQUENCE_HPP_
 #define ALLPP_SEQUENCE_HPP_
 
+#include <string>
 #include <vector>
 
 #include "allpp/MonomerType.hpp"

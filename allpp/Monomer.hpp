@@ -1,6 +1,9 @@
 #ifndef ALLPP_MONOMER_HPP_
 #define ALLPP_MONOMER_HPP_
 
+#include <cstdlib>
+#include <string>
+
 #include "allpp/MonomerType.hpp"
 
 namespace allpp {
@@ -39,6 +42,9 @@ public:
 
     bool operator==(const Monomer<monomer_type>& other) const;
     bool operator!=(const Monomer<monomer_type>& other) const;
+
+    void* operator new(size_t x);
+    void operator delete(void* x);
 
 private:
     const MonomerClass<monomer_class>& monomer_class_;
