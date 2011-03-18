@@ -1,14 +1,9 @@
 #ifndef ALLPP_MONOMER_HPP_
 #define ALLPP_MONOMER_HPP_
 
-namespace allpp {
+#include "allpp/MonomerType.hpp"
 
-enum MonomerType
-{
-    PROTEIN,
-    DNA,
-    RNA
-};
+namespace allpp {
 
 template <MonomerType monomer_type>
 class MonomerClass
