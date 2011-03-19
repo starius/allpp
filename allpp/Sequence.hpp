@@ -9,7 +9,7 @@
 namespace allpp {
 
 template <MonomerType monomer_type>
-class Sequence : std::vector<Monomer<monomer_class>* >
+class Sequence : std::vector<Monomer<monomer_class> >
 {
 public:
     Sequence(const std::string& name="",
@@ -19,7 +19,6 @@ public:
         const std::string& name="",
         const std::string& description="",
         const std::string& source="");
-    ~Sequence();
 
     const std::string& name() const;
     const std::string& description() const;
