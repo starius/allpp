@@ -22,7 +22,7 @@ template <MonomerType monomer_type>
 class Block;
 
 template <MonomerType monomer_type>
-class Alignment : Block<monomer_type>
+class Alignment : BaseBlock<monomer_type>
 {
 public:
     ~Alignment();
@@ -32,7 +32,7 @@ private:
 };
 
 template <MonomerType monomer_type>
-class Block : Block<monomer_type>
+class Block : BaseBlock<monomer_type>
 {
 public:
 private:
