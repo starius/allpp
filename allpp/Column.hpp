@@ -11,7 +11,7 @@ namespace allpp {
 
 template <MonomerType monomer_type>
 class Column :
-    std::map<Sequence<monomer_type>*, Monomer<monomer_type>*>
+    std::map<Sequence<monomer_type>&, Monomer<monomer_type>&>
 {
 public:
 };
