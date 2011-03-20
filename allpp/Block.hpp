@@ -11,32 +11,26 @@
 namespace allpp {
 
 template <MonomerType monomer_type>
-class BaseBlock : std::vector<Column<monomer_type>& >
-{
-public:
-private:
-    std::vector<Sequence<monomer_type>&> sequences_;
-};
-
-template <MonomerType monomer_type>
 class Block;
 
 template <MonomerType monomer_type>
-class Alignment : BaseBlock<monomer_type>
+class Alignment : std::vector<Column<monomer_type> >
 {
 public:
     ~Alignment();
 
 private:
-    std::vector<Block&> blocks_;
+    std::vector<Sequence<monomer_type>& > sequences_;
+    std::vector<Block<monomer_type>& > blocks_;
 };
 
 template <MonomerType monomer_type>
-class Block : BaseBlock<monomer_type>
+class Block : std::vector<Column<monomer_type>& >
 {
 public:
 private:
     Alignment<monomer_type>& alignment_;
+    std::vector<Sequence<monomer_type>& > sequences_;
 };
 
 }

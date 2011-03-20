@@ -1,19 +1,20 @@
 #ifndef ALLPP_COLUMN_HPP_
 #define ALLPP_COLUMN_HPP_
 
-#include <map>
+#include <vector>
 
 #include "allpp/MonomerType.hpp"
-#include "allpp/Sequence.hpp"
 #include "allpp/Monomer.hpp"
 
 namespace allpp {
 
 template <MonomerType monomer_type>
-class Column :
-    std::map<Sequence<monomer_type>&, Monomer<monomer_type>&>
+class Column
 {
 public:
+private:
+    int index_in_alignment_;
+    std::vector<Monomer<monomer_type>* > monomers_;
 };
 
 }

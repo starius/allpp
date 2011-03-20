@@ -28,6 +28,7 @@ private:
     std::string name_;
     std::string description_;
     std::string source_;
+    int index_in_alignment_;
 };
 
 }
