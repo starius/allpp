@@ -26,7 +26,7 @@ public:
     const std::string& source() const;
 
 private:
-    std::vector<Monomer<mt>* > monomers;
+    std::vector<Monomer<mt> > monomers;
     std::string name_;
     std::string description_;
     std::string source_;
