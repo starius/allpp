@@ -8,13 +8,13 @@
 
 namespace allpp {
 
-template <MonomerType monomer_type>
+template <MonomerType mt>
 class Column
 {
 public:
 private:
     int index_in_alignment_;
-    std::vector<Monomer<monomer_type>* > monomers_;
+    std::vector<Monomer<mt>* > monomers_;
 };
 
 }

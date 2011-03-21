@@ -8,7 +8,7 @@
 
 namespace allpp {
 
-template <MonomerType monomer_type>
+template <MonomerType mt>
 class MonomerClass
 {
 public:
@@ -19,8 +19,8 @@ public:
     const std::string& code3() const;
     const std::string& name() const;
 
-    static MonomerClass<monomer_type>& from_code1(char code1);
-    static MonomerClass<monomer_type>& from_code3(const std::string& code3);
+    static MonomerClass<mt>& from_code1(char code1);
+    static MonomerClass<mt>& from_code3(const std::string& code3);
 
 private:
     const char code1_;
@@ -28,7 +28,7 @@ private:
     const std::string name_;
 };
 
-template <MonomerType monomer_type>
+template <MonomerType mt>
 class Monomer
 {
 public:
@@ -40,8 +40,8 @@ public:
     const std::string& code3() const;
     const std::string& name() const;
 
-    bool operator==(const Monomer<monomer_type>& other) const;
-    bool operator!=(const Monomer<monomer_type>& other) const;
+    bool operator==(const Monomer<mt>& other) const;
+    bool operator!=(const Monomer<mt>& other) const;
 
     void* operator new(size_t x);
     void operator delete(void* x);

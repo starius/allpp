@@ -8,7 +8,7 @@
 
 namespace allpp {
 
-template <MonomerType monomer_type>
+template <MonomerType mt>
 class Sequence : std::vector<Monomer<monomer_class> >
 {
 public:

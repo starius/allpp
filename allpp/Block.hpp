@@ -10,27 +10,27 @@
 
 namespace allpp {
 
-template <MonomerType monomer_type>
+template <MonomerType mt>
 class Block;
 
-template <MonomerType monomer_type>
-class Alignment : std::vector<Column<monomer_type> >
+template <MonomerType mt>
+class Alignment : std::vector<Column<mt> >
 {
 public:
     ~Alignment();
 
 private:
-    std::vector<Sequence<monomer_type>& > sequences_;
-    std::vector<Block<monomer_type>& > blocks_;
+    std::vector<Sequence<mt>& > sequences_;
+    std::vector<Block<mt>& > blocks_;
 };
 
-template <MonomerType monomer_type>
-class Block : std::vector<Column<monomer_type>& >
+template <MonomerType mt>
+class Block : std::vector<Column<mt>& >
 {
 public:
 private:
-    Alignment<monomer_type>& alignment_;
-    std::vector<Sequence<monomer_type>& > sequences_;
+    Alignment<mt>& alignment_;
+    std::vector<Sequence<mt>& > sequences_;
 };
 
 }
