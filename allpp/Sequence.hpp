@@ -9,7 +9,7 @@
 namespace allpp {
 
 template <MonomerType mt>
-class Sequence : std::vector<Monomer<monomer_class> >
+class Sequence
 {
 public:
     Sequence(const std::string& name="",
@@ -19,16 +19,19 @@ public:
         const std::string& name="",
         const std::string& description="",
         const std::string& source="");
+    ~Sequence();
 
     const std::string& name() const;
     const std::string& description() const;
     const std::string& source() const;
 
 private:
+    std::vector<Monomer<mt>* > monomers;
     std::string name_;
     std::string description_;
     std::string source_;
     int index_in_alignment_;
+    std::vector<Markup<mt, Monomer>* > markups_;
 };
 
 }
