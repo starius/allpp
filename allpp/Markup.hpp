@@ -4,15 +4,17 @@
 #include <vector>
 
 #include "allpp/MonomerType.hpp"
-#include "allpp/Monomer.hpp"
 
 namespace allpp {
 
-template <MonomerType mt, template<MonomerType> class Element>
-class Markup
+template <MonomerType mt,
+    template<MonomerType> class Element,
+    typename Value>
+class BaseMarkup
 {
 public:
 private:
+    std::vector<Value> values_;
 };
 
 }
