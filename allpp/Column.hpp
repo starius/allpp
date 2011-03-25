@@ -14,6 +14,7 @@ class Column
 public:
 private:
     std::vector<Monomer<mt>* > monomers_;
+    int index_in_alignment_;
 };
 
 }
