@@ -31,7 +31,7 @@ private:
     std::string description_;
     std::string source_;
     int index_in_alignment_;
-    std::vector<Markup<mt, Monomer>* > markups_;
+    std::vector<BaseMarkup<mt, Sequence> > markups_;
 };
 
 }

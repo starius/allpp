@@ -20,10 +20,9 @@ public:
     ~Alignment();
 
 private:
-    std::vector<Sequence<mt>* > sequences_;
+    std::vector<Sequence<mt> > sequences_;
     std::vector<Column<mt>* > columns_;
-    std::vector<Block<mt>* > blocks_;
-    std::vector<Markup<mt, Column>* > markups_;
+    std::vector<Block<mt> > blocks_;
 };
 
 template <MonomerType mt>
@@ -33,6 +32,7 @@ public:
 private:
     Alignment<mt>& alignment_;
     std::vector<Sequence<mt>* > sequences_;
+    std::vector<Markup<mt, Block> > markups_;
     int start_;
     int stop_;
 };
