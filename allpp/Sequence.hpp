@@ -25,6 +25,8 @@ public:
     const std::string& description() const;
     const std::string& source() const;
 
+    int monomer_index(const Monomer<mt>* monomer_) const;
+
 private:
     std::vector<Monomer<mt> > monomers;
     std::string name_;

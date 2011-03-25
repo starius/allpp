@@ -19,9 +19,21 @@ class Alignment
 public:
     ~Alignment();
 
+    void detach_sequences();
+
+    int column_index(const Column<mt>* column_) const;
+
+    void insert_gap_column(Column<mt>* column); // before
+    void drop_gap_column(Column<mt>* column);
+
+    void move_monomer(const Sequence* sequence,
+        Column<mt>* source, Column<mt>* dest, bool check=true);
+    void flush_monomers(const Sequence* sequence,
+        Column<mt>* source, Column<mt>* dest, bool check=true);
+
 private:
     std::vector<Sequence<mt> > sequences_;
-    std::vector<Column<mt>* > columns_;
+    std::vector<Column<mt> > columns_;
     std::vector<Block<mt> > blocks_;
 };
 
