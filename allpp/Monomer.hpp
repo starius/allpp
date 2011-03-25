@@ -48,7 +48,6 @@ public:
 
 private:
     const MonomerClass<monomer_class>* monomer_class_;
-    int index_in_sequence_;
 };
 
 }
