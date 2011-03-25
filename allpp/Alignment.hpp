@@ -14,31 +14,27 @@ template <MonomerType mt>
 class Block;
 
 template <MonomerType mt>
-class BaseAlignment
-{
-public:
-private:
-    std::vector<Column<mt>* > columns_;
-    std::vector<Sequence<mt>* > sequences_;
-};
-
-template <MonomerType mt>
-class Alignment : BaseAlignment
+class Alignment
 {
 public:
     ~Alignment();
 
 private:
+    std::vector<Sequence<mt>* > sequences_;
+    std::vector<Column<mt>* > columns_;
     std::vector<Block<mt>* > blocks_;
     std::vector<Markup<mt, Column>* > markups_;
 };
 
 template <MonomerType mt>
-class Block : BaseAlignment
+class Block
 {
 public:
 private:
     Alignment<mt>& alignment_;
+    std::vector<Sequence<mt>* > sequences_;
+    int start_;
+    int stop_;
 };
 
 }
