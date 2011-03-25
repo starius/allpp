@@ -32,8 +32,8 @@ public:
         Column<mt>* source, Column<mt>* dest, bool check=true);
 
 private:
-    std::vector<Sequence<mt> > sequences_;
-    std::vector<Column<mt> > columns_;
+    std::vector<Sequence<mt>* > sequences_;
+    std::vector<Column<mt>* > columns_;
     std::vector<Block<mt> > blocks_;
 };
 
@@ -44,9 +44,8 @@ public:
 private:
     Alignment<mt>& alignment_;
     std::vector<Sequence<mt>* > sequences_;
+    std::vector<Column<mt>* > columns_;
     std::vector<Markup<mt, Block> > markups_;
-    int start_;
-    int stop_;
 };
 
 }
