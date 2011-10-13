@@ -1,0 +1,18 @@
+syntax: glob
+
+*.o
+*.wt
+
+*.swp
+
+*.orig
+*.org
+
+debug/
+release/
+doc/
+
+*.db
+
+*.png
+
