@@ -5,8 +5,7 @@
 
 namespace allpp {
 
-class ParseException : std::exception
-{
+class ParseException : std::exception {
 };
 
 }

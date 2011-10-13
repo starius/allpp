@@ -3,8 +3,7 @@
 
 namespace allpp {
 
-enum MonomerType
-{
+enum MonomerType {
     PROTEIN,
     DNA,
     RNA

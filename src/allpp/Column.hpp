@@ -9,8 +9,7 @@
 namespace allpp {
 
 template <MonomerType mt>
-class Column
-{
+class Column {
 public:
 private:
     std::vector<Monomer<mt>* > monomers_;

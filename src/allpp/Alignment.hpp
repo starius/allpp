@@ -11,12 +11,11 @@
 namespace allpp {
 
 template <MonomerType mt>
-class BaseAlignment
-{
+class BaseAlignment {
 public:
     virtual void move_monomer(const Sequence* sequence,
-        Column<mt>* source, Column<mt>* dest, bool flush=false,
-        bool check=true) = 0;
+                              Column<mt>* source, Column<mt>* dest, bool flush = false,
+                              bool check = true) = 0;
 
     virtual int index(const Column<mt>* column_) const = 0;
 
@@ -29,8 +28,7 @@ template <MonomerType mt>
 class Block;
 
 template <MonomerType mt>
-class Alignment : public BaseAlignment
-{
+class Alignment : public BaseAlignment {
 public:
     ~Alignment();
 
@@ -46,8 +44,7 @@ private:
 };
 
 template <MonomerType mt>
-class Block : public BaseAlignment
-{
+class Block : public BaseAlignment {
 public:
 private:
     Alignment<mt>& alignment_;

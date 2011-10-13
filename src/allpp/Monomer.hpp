@@ -9,11 +9,10 @@
 namespace allpp {
 
 template <MonomerType mt>
-class MonomerClass
-{
+class MonomerClass {
 public:
     MonomerClass(char code1, const std::string& code3,
-        const std::string& name);
+                 const std::string& name);
 
     char code1() const;
     const std::string& code3() const;
@@ -29,13 +28,12 @@ private:
 };
 
 template <MonomerType mt>
-class Monomer
-{
+class Monomer {
 public:
     MonomerClass(char code1):
-    MonomerClass(const std::string& code3):
+        MonomerClass(const std::string& code3):
 
-    const MonomerClass<monomer_class>& monomer_class() const;
+        const MonomerClass<monomer_class>& monomer_class() const;
     char code1() const;
     const std::string& code3() const;
     const std::string& name() const;

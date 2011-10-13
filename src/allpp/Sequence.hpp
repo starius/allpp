@@ -9,16 +9,15 @@
 namespace allpp {
 
 template <MonomerType mt>
-class Sequence
-{
+class Sequence {
 public:
-    Sequence(const std::string& name="",
-        const std::string& description="",
-        const std::string& source="");
+    Sequence(const std::string& name = "",
+             const std::string& description = "",
+             const std::string& source = "");
     Sequence(const std::string& fasta_string,
-        const std::string& name="",
-        const std::string& description="",
-        const std::string& source="");
+             const std::string& name = "",
+             const std::string& description = "",
+             const std::string& source = "");
     ~Sequence();
 
     const std::string& name() const;
